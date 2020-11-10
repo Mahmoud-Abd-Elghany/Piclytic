@@ -1,0 +1,8 @@
+.bar-container{
+    background-color: #2222224f;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+}
+

@@ -1,0 +1,162 @@
+.form_container {
+  width: 45%;
+  margin: auto;
+  padding: 2px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: fixed;
+  top: 25%;
+  left: 25%;
+}
+
+.form_container .paragraph {
+  font-size: 28px;
+  text-align: center;
+  width: 70%;
+  height: 100%;
+  margin: auto;
+  position: relative;
+  bottom: 5vh;
+}
+
+.form_container .inputForm {
+  width: 90%;
+  margin: auto;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px 20px;
+  border-radius: 4px;
+  -webkit-box-shadow: 7px 7px 10px #00050480;
+          box-shadow: 7px 7px 10px #00050480;
+  height: 10vh;
+}
+
+.form_container .inputForm .input {
+  width: 75%;
+  height: 4.3vh;
+  margin: 0 4px;
+  border-radius: 4px;
+  border: 1px solid #00050400;
+  font-family: sans-serif;
+}
+
+.form_container .inputForm .input:focus {
+  outline: none;
+}
+
+.form_container .inputForm .btn {
+  opacity: 0.9;
+  border: none;
+  border-radius: 4px;
+  width: 20%;
+  height: 4.5vh;
+  margin: 0 4px;
+  -webkit-animation: gradient 12s ease infinite;
+          animation: gradient 12s ease infinite;
+  background: -webkit-gradient(linear, left top, right top, from(#750066), color-stop(#000504), to(#156380));
+  background: linear-gradient(90deg, #750066, #000504, #156380);
+  background-size: 400% 400%;
+  color: white;
+}
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.form_container .inputForm .btn:hover {
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+}
+
+.form_container .image {
+  width: 500px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: absolute;
+  top: 105%;
+  left: 20%;
+  -webkit-box-shadow: 10px 10px 10px #00050467;
+          box-shadow: 10px 10px 10px #00050467;
+  border-radius: 3px;
+  opacity: 0.7;
+}
+
+@media only screen and (max-width: 600px) {
+  .form_container {
+    width: 100%;
+    top: 20%;
+    left: 0%;
+  }
+  .form_container .paragraph {
+    font-size: 28px;
+    text-align: center;
+    width: 70%;
+    height: 100%;
+    margin: auto;
+    position: relative;
+    bottom: 5vh;
+  }
+  .form_container .inputForm {
+    width: 95%;
+    padding: 2px 10px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-radius: 4px;
+    height: 15vh;
+  }
+  .form_container .inputForm .input {
+    width: 90%;
+    height: 4.8vh;
+    margin: 5px 0px;
+  }
+  .form_container .inputForm .btn {
+    opacity: 1;
+    width: 30%;
+    height: 5.5vh;
+    margin: 5px auto;
+  }
+  .form_container .image {
+    width: 300px;
+    max-height: 300px;
+    position: absolute;
+    top: 110%;
+    left: 15%;
+    opacity: 0.7;
+  }
+}
+/*# sourceMappingURL=formLink.css.map */

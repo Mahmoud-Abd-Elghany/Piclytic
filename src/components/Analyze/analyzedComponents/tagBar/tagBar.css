@@ -1,0 +1,14 @@
+.bar_container{
+    background-color: #2222224f;
+    height: 100%;
+}
+
+.bar{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-items: center;
+    grid-row-gap: 60px;
+    margin: auto;
+    padding: 20px 5px;
+    grid-column-gap: 20px ;
+}

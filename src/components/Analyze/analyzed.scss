@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: 4fr auto;
+  grid-template-areas:
+    "img tB"
+    "clrB clrB ";
+}
+
+.grid-container .img-container {
+  grid-area: img;
+  background-color: #2222224f;
+  height: 40rem;
+}
+
+.grid-container .img-container .img {
+  height: 60%;
+  margin: auto;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 20%;
+}
+
+.grid-container .tagBar {
+  grid-area: tB;
+}
+.grid-container .colorBar {
+  grid-area: clrB;
+  background-color: rgba(255, 160, 122, 0);
+  height: 24.6vh;
+}

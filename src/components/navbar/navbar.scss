@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+$white : #ffffffab;
+@mixin flex{
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+}
+
+@mixin reset {
+    margin: 0;
+    padding: 0;
+}
+.navbar {
+    @include reset;
+    height: 7vh;
+    background-color: #2222224f;
+
+    & .container{
+
+        max-width: 95%;
+        height: 100%;
+        @include reset;
+        margin: auto;
+        @include flex;
+        margin: 0 auto;
+
+        & .list{
+            list-style: none;
+            @include reset;
+            margin: auto 0;
+            font-family: 'Righteous', cursive;
+
+            & .list_item{
+                font-size: 27px;
+                font-weight: 400;
+                text-decoration: none;
+                color: #ffffff;
+                border: 0.5px solid $white;
+                padding: 3px 5px;
+                transition: 0.2s ease-out;
+                border-radius: 2px;
+                background-color: transparent;
+
+                &:hover{
+                    color: #222222;
+                    background-color: $white;
+                    
+                }
+            }
+        }
+
+    }
+}

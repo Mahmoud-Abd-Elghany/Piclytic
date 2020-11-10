@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 4fr 1fr;
+      grid-template-columns: 4fr 1fr;
+  -ms-grid-rows: 4fr auto;
+      grid-template-rows: 4fr auto;
+      grid-template-areas: "img tB" "clrB clrB ";
+}
+
+.grid-container .img-container {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: img;
+  background-color: #2222224f;
+  height: 40rem;
+}
+
+.grid-container .img-container .img {
+  height: 60%;
+  margin: auto;
+  display: block;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  top: 20%;
+}
+
+.grid-container .tagBar {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: tB;
+}
+
+.grid-container .colorBar {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: clrB;
+  background-color: rgba(255, 160, 122, 0);
+  height: 24.6vh;
+}
+/*# sourceMappingURL=analyzed.css.map */
