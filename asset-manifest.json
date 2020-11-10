@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Piclytic/static/css/main.9c75fac0.chunk.css",
+    "main.js": "/Piclytic/static/js/main.fc72d577.chunk.js",
+    "main.js.map": "/Piclytic/static/js/main.fc72d577.chunk.js.map",
+    "runtime-main.js": "/Piclytic/static/js/runtime-main.04cf92b4.js",
+    "runtime-main.js.map": "/Piclytic/static/js/runtime-main.04cf92b4.js.map",
+    "static/js/2.08c6cbdb.chunk.js": "/Piclytic/static/js/2.08c6cbdb.chunk.js",
+    "static/js/2.08c6cbdb.chunk.js.map": "/Piclytic/static/js/2.08c6cbdb.chunk.js.map",
+    "static/js/3.478cfd65.chunk.js": "/Piclytic/static/js/3.478cfd65.chunk.js",
+    "static/js/3.478cfd65.chunk.js.map": "/Piclytic/static/js/3.478cfd65.chunk.js.map",
+    "index.html": "/Piclytic/index.html",
+    "static/css/main.9c75fac0.chunk.css.map": "/Piclytic/static/css/main.9c75fac0.chunk.css.map",
+    "static/js/2.08c6cbdb.chunk.js.LICENSE.txt": "/Piclytic/static/js/2.08c6cbdb.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.04cf92b4.js",
+    "static/js/2.08c6cbdb.chunk.js",
+    "static/css/main.9c75fac0.chunk.css",
+    "static/js/main.fc72d577.chunk.js"
+  ]
+}
