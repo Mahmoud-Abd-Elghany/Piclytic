@@ -12,7 +12,7 @@ export default function Navbar() {
                 <div className="container">
                     <ul className="list">
                         <li>
-                            <Link className="list_item" to="/">
+                            <Link className="list_item" to="/Piclytic">
                                 Home
                             </Link>
                         </li>

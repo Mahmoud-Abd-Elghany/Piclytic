@@ -6,7 +6,7 @@ import "./tagBar.css"
 export default function TagBar() {
     const {tags} = useContext(PicContext);
     const tag = tags.map((tag, index) => {
-        if(index<12){
+        if(index<20){
         return(
             <div>
                 <TagElement name={tag.name} key={tag.id}/>

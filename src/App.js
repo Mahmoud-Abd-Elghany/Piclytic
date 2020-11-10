@@ -16,7 +16,7 @@ function App() {
     <PicProvider>
     <Router>
         <Navbar/>
-        <Route exact path="/"> 
+        <Route exact path="/Piclytic"> 
           <FormLink/>
         </Route>
         <Route exact path="/Analyze"> 

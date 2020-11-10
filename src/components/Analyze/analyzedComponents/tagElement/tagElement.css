@@ -8,6 +8,7 @@
   align-items: center;
   margin: 8px;
   transition: 0.1s ease-out;
+  font-size: 18px;
 }
 .element:hover {
   border: 1px solid #fffbfbe3;
