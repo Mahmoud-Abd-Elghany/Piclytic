@@ -20,7 +20,7 @@ export default function Navbar() {
                 <div className="container">
                     <ul className="list">
                         <li>
-                            <Link onClick={clickHandler} className="list_item" to="/Piclytic/Home">
+                            <Link onClick={clickHandler} className="list_item" to="/Piclytic/">
                                 Home
                             </Link>
                         </li>
