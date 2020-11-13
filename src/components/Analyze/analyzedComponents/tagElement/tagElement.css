@@ -1,11 +1,9 @@
 .element {
   border: 1px solid #eeeeee;
-  width: 120px;
-  padding: 2px;
+  width: 135px;
+  padding: 3px;
   border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
   margin: 8px;
   transition: 0.1s ease-out;
   font-size: 18px;
@@ -14,5 +12,17 @@
   border: 1px solid #fffbfbe3;
   background-color: #ffffffd3;
   color: #222222;
-  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .element {
+    border: 1px solid #eeeeee;
+    width: 110px;
+    padding: 3px;
+    border-radius: 20px;
+    text-align: center;
+    margin: 2px;
+    transition: 0.1s ease-out;
+    font-size: 15px;
+  }
 }

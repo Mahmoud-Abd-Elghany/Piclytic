@@ -6,15 +6,9 @@ export default function Bar({value,perc}) {
     const style ={
             backgroundColor: `${value}`,
             width: `${percN}%`,
-            height: "90%",
-            left: "0.5%",
-            margin: "auto 0",
-            position: "relative",
-            display: "block",
-            alignItems: "left"
     }
     return (
-            <div style={style} >
+            <div style={style} className="style_continue" >
                     <p className="hex-value">{value}</p>
             </div>
 

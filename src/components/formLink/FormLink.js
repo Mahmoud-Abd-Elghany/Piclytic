@@ -2,17 +2,16 @@ import React, {useState, useContext} from 'react';
 import "../../style/formLink.css";
 import {withRouter} from "react-router-dom";
 import {PicContext} from "../../state/picContext"
-import Analyzed from '../Analyze/Analyzed';
 
 
 const FormLink = (props) => {
     const {analyzeTags, analyzeColors,updateImage} = useContext(PicContext)
 
     const redirect = () =>{
-        props.history.push('/Analyze')
+        props.history.push('/Piclytic/Analyze')
     }
     const [image, setImage]= useState("");
-
+    
     const imageSubmitter =  (e) => {
         e.preventDefault()
         console.log(image);
@@ -20,7 +19,9 @@ const FormLink = (props) => {
             analyzeTags(image);
             analyzeColors(image);
             updateImage(image);
-            setTimeout(() => redirect(),750);
+            setTimeout(() => {
+                redirect()
+            },1000);
         }
     }
     return (

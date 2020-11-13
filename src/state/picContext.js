@@ -9,11 +9,9 @@ const app = new Clarifai.App({
      apiKey: key
     });
 
-/* https://images.ctfassets.net/hrltx12pl8hq/4plHDVeTkWuFMihxQnzBSb/aea2f06d675c3d710d095306e377382f/shutterstock_554314555_copy.jpg */
-
 export const PicProvider = props => {
-    const [colors, setColors] = useState([{hex_raw: "", name: "", value: ""}]);
-    const [tags, setTags] = useState([{id: "", name: "", value: "", app_id: ""}])
+    const [colors, setColors] = useState([{value: "null"}]);
+    const [tags, setTags] = useState([{value: "null"}])
     const [image, updateImage] = useState("")
 
 
@@ -42,6 +40,8 @@ export const PicProvider = props => {
             analyzeColors: analyzeColors,
             image:image,
             updateImage:updateImage,
+            setTags: setTags,
+            setColors: setColors,
         }}>
             {props.children}
         </PicContext.Provider>

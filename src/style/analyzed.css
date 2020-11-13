@@ -6,8 +6,8 @@ body {
 .grid-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 4fr 1fr;
-      grid-template-columns: 4fr 1fr;
+  -ms-grid-columns: 4fr 2fr;
+      grid-template-columns: 4fr 2fr;
   -ms-grid-rows: 4fr auto;
       grid-template-rows: 4fr auto;
       grid-template-areas: "img tB" "clrB clrB ";
@@ -19,10 +19,14 @@ body {
   grid-area: img;
   background-color: #2222224f;
   height: 40rem;
+  background-size: cover;
+  -webkit-filter: blur(0px);
+          filter: blur(0px);
+  background-blend-mode: multiply;
 }
 
 .grid-container .img-container .img {
-  height: 60%;
+  height: 80%;
   margin: auto;
   display: block;
   -webkit-box-align: center;
@@ -32,7 +36,10 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
-  top: 20%;
+  top: 10%;
+  -webkit-box-shadow: 10px 10px 5px #0f0f0f8f;
+          box-shadow: 10px 10px 5px #0f0f0f8f;
+  border-radius: 10px;
 }
 
 .grid-container .tagBar {
@@ -48,5 +55,54 @@ body {
   grid-area: clrB;
   background-color: rgba(255, 160, 122, 0);
   height: 24.6vh;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  .grid-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    -ms-grid-rows: 1fr 0.6fr 0.5fr;
+        grid-template-rows: 1fr 0.6fr 0.5fr;
+        grid-template-areas: "img" "tB" "clrB";
+  }
+  .grid-container .img-container {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: img;
+    background-color: #2222224f;
+    height: 40rem;
+  }
+  .grid-container .img-container .img {
+    margin: auto;
+    display: block;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: relative;
+    top: 20%;
+    max-width: 350px;
+    max-height: 400px;
+  }
+  .grid-container .tagBar {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: tB;
+  }
+  .grid-container .colorBar {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: clrB;
+    background-color: rgba(255, 160, 122, 0);
+    height: 50vh;
+  }
 }
 /*# sourceMappingURL=analyzed.css.map */

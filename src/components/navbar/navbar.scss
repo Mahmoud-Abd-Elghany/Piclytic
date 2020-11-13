@@ -29,25 +29,25 @@ $white : #ffffffab;
             @include reset;
             margin: auto 0;
             font-family: 'Righteous', cursive;
+            display: flex;
+            flex-direction: row;
 
             & .list_item{
-                font-size: 27px;
+                font-size: 30px;
                 font-weight: 400;
                 text-decoration: none;
-                color: #ffffff;
-                border: 0.5px solid $white;
+                color: #cfcfcf;
+                border-bottom: 1px solid $white;
                 padding: 3px 5px;
-                transition: 0.2s ease-out;
-                border-radius: 2px;
+                transition: 0.1s ease;
                 background-color: transparent;
 
                 &:hover{
-                    color: #222222;
-                    background-color: $white;
-                    
+                    border-width: 2px;
+                    color: white;
                 }
-            }
         }
+    }
 
     }
 }
