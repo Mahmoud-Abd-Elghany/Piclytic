@@ -1,11 +1,12 @@
 # Piclytic
 
-# Used Technologies
+# Used Technologies and libraries
 - React
 - Sass
 - State management (Context API)
 - React Hooks
 - RESTful API
+- React Router
 
 ## About
 
