@@ -1,0 +1,74 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: 4fr auto;
+  grid-template-areas:
+    "img tB"
+    "clrB clrB";
+
+    & .img-container {
+      grid-area: img;
+      background-color: #2222224f;
+      height: 40rem;
+      background-size: cover;
+      background-blend-mode: multiply;
+      display: flexbox;
+      justify-content: center;
+      align-content: center;
+      
+
+      & .img {
+        max-width: 90%;
+        height: 90%;
+        margin: auto;
+        display: block;
+        box-shadow: 10px 10px 5px #0f0f0f8f;
+        border-radius: 10px;
+        position: relative;
+        top: 5%;
+      }
+    }
+    & .tagBar {
+      grid-area: tB;
+    }
+
+    & .colorBar {
+      grid-area: clrB;
+      height: 23vh;
+    }
+}
+
+
+@media only screen and (max-width: 1325px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 64% 23% 26%;
+    grid-template-areas:
+      "img"
+      "clrB"
+      "tB";
+  }
+  
+  .grid-container .img-container {
+    grid-area: img;
+  }
+  
+  .grid-container .img-container .img {
+    margin: auto;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 20%;
+    max-width: 350px;
+    max-height: 400px;
+  }
+  
+  .grid-container .tagBar {
+    grid-area: tB;
+  }
+  .grid-container .colorBar {
+    grid-area: clrB;
+  }
+}

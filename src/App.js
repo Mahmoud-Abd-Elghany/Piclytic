@@ -1,14 +1,14 @@
 import React from "react"
-import Navbar from "./components/navbar/Navbar"
-import FormLink from "./components/formLink/FormLink"
-import Analyzed from "./components/Analyze/Analyzed"
-import Invalid from "./components/Invalid/Invalid"
-import "./app.css"
+import Navbar from "./components/navbar/navbar.component"
+import FormLinkPage from "./pages/form-link/formlink-page.component"
+import InvalidPage from "./pages/invalid/invalid-page.component"
+import AnalysisPageContainer from "./pages/analysis/analysis-page.container"
+import "./App.css"
 import {PicProvider} from "./state/picContext"
-
 import {
   BrowserRouter as Router,
   Route,
+  Switch,
 } from "react-router-dom";
 
 function App() {
@@ -16,15 +16,11 @@ function App() {
     <PicProvider>
     <Router>
         <Navbar/>
-        <Route exact path="/Piclytic/"> 
-          <FormLink/>
-        </Route>
-        <Route exact path="/Piclytic/Analyze"> 
-          <Analyzed/>
-        </Route>
-        <Route exact path="/Piclytic/invalid"> 
-          <Invalid/>
-        </Route>
+        <Switch>
+          <Route exact path="/" component={FormLinkPage}/> 
+          <Route exact path="/Analyze" component={AnalysisPageContainer}/>
+          <Route exact path="/invalid" component={InvalidPage}/> 
+        </Switch>
     </Router>
     </PicProvider>
   );
