@@ -1,24 +1,20 @@
-import React, {useContext} from 'react'
+import React from 'react'
+import { useSelector } from 'react-redux'
 import TagElement from "../tag-element/tag-element.component"
-import {PicContext} from "../../state/picContext"
 import "./tags-grid.style.scss"
 
 const TagsGrid = () => {
-    const {tags} = useContext(PicContext);
-    const tag = tags.map((tag, index) => {
-        if(index<20){
-        return(
-            <div>
-                <TagElement name={tag.name} key={tag.id}/>
-            </div>
-        )
-        }
-    })
-    
+    const {tags} = useSelector(state => state.analysis);
     return (
         <div className="bar_container">
             <div className="bar">
-                {tag}
+                {
+                    tags.map((tag, index) => {
+                        while(index<20){
+                        return <TagElement name={tag.name} key={tag.id}/>
+                        }
+                    })
+                }
             </div>
         </div>
     )

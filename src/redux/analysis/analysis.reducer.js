@@ -4,10 +4,10 @@ const INITIAL_STATE = {
     isColorsLoading: false,
     isTagsLoading: false,
     isLoading: false,
-    errorMsg: '',
+    error: false,
 }
 export const analysisReducer = (state = INITIAL_STATE, action) => {
-    switch(action){
+    switch(action.type){
         case 'FETCH_DATA_START':
             return{
                 ...state,
@@ -29,15 +29,19 @@ export const analysisReducer = (state = INITIAL_STATE, action) => {
             }
         case 'FETCH_DATA_SUCCESS':
             return{
-                ...StaticRange,
+                ...state,
                 isLoading: false
             }
         case 'FETCH_DATA_FAILURE':
             return{
                 ...state,
-                errorMsg: `${action.payload}`,
+                error: true,
                 isColorsLoading: false,
                 isTagsLoading: false,
+            }
+        case 'CLEAR_DATA':
+            return {
+                ...INITIAL_STATE
             }
         default:
             return state

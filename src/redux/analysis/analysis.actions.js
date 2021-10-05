@@ -16,14 +16,18 @@ const fetchDataSuccess = () => ({
     type: 'FETCH_DATA_SUCCESS'
 })
 
-const fetchFailure = (errorMsg) => ({
+const fetchFailure = () => ({
     type: 'FETCH_DATA_FAILURE',
-    payload: errorMsg
+})
+
+export const clearData = () => ({
+    type: 'CLEAR_DATA'
 })
 
 export const fetchStartAsync = (image) => {
-    const key = 'f16c637d19a6480092f9984c3b0b3665';
+    const key = '85bd1fba750143dfbb7b614b38a80189';
     const Clarifai = require('clarifai');
+    const Color_Model = 'eeed0b6733a644cea07cf4c60f87ebb7';
     const app = new Clarifai.App({
         apiKey: key
     });
@@ -33,13 +37,16 @@ export const fetchStartAsync = (image) => {
             //TAGS Fetching
             await app.models.initModel({id: Clarifai.GENERAL_MODEL, version: "aa7f35c01e0642fda5cf400f543e7c40"})
                 .then(generalModel => { return generalModel.predict(image); })
-                .then(response => { 
-                    dispatch(fetchTagsSuccess(response['outputs'][0]['data']['concepts'])); 
-                });
+                //.then(resp => console.log('tags: ', resp.outputs[0].data.concepts))
+                .then(resp => { 
+                    dispatch(fetchTagsSuccess(resp.outputs[0].data.concepts)); 
+                }).catch('tags failed');
 
             //COLORS Fetching
-           await app.models.predict("eeed0b6733a644cea07cf4c60f87ebb7", image, false)
-                .then(resp => dispatch(fetchColorsSuccess((resp['outputs'][0]['data']['colors']))));
+            await app.models.predict(Color_Model, image, false)
+            .then(resp => { 
+                dispatch(fetchColorsSuccess(resp.outputs[0].data.colors)) 
+            });
 
             await dispatch(fetchDataSuccess());
 

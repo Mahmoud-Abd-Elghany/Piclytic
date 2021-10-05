@@ -1,17 +1,17 @@
-import React, {useContext} from 'react'
+import React from 'react'
+import { useDispatch } from 'react-redux';
+import { clearData } from '../../redux/analysis/analysis.actions'
 import "./navbar.style.scss"
 import {
     Link,
   } from "react-router-dom";
-import {PicContext} from "../../state/picContext"
 
 
 
 const Navbar = () => {
-    const {setTags, setColors} = useContext(PicContext);
+    const dispatch = useDispatch()
     const clickHandler =()=>{
-        setTags([{value: "null"}]);
-        setColors([{value: "null"}]);
+        dispatch(clearData());
     }
     return (
         <div>
