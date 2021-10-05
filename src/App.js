@@ -4,7 +4,6 @@ import FormLinkPage from "./pages/form-link/formlink-page.component"
 import InvalidPage from "./pages/invalid/invalid-page.component"
 import AnalysisPageContainer from "./pages/analysis/analysis-page.container"
 import "./App.css"
-import {PicProvider} from "./state/picContext"
 import {
   BrowserRouter as Router,
   Route,
@@ -13,7 +12,6 @@ import {
 
 function App() {
   return (
-    <PicProvider>
     <Router>
         <Navbar/>
         <Switch>
@@ -22,7 +20,6 @@ function App() {
           <Route exact path="/invalid" component={InvalidPage}/> 
         </Switch>
     </Router>
-    </PicProvider>
   );
 }
 
