@@ -1,45 +1,32 @@
 .grid-container {
-  display: grid;
-  grid-template-columns: 75% 25%;
-  grid-template-rows: 4fr auto;
-  grid-template-areas:
-    "img tB"
-    "clrB clrB";
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 
     & .img-container {
-      grid-area: img;
-      background-color: #2222224f;
-      height: 40rem;
+      background-color: #2222227e;
+      height: 90vh;
+      width: 100%;
       background-size: cover;
       background-blend-mode: multiply;
-      display: flexbox;
+      display: flex;
       justify-content: center;
-      align-content: center;
-      
+      align-items: center;
+      margin-top: 2vh;
 
       & .img {
         max-width: 90%;
-        height: 90%;
-        margin: auto;
-        display: block;
+        max-height: 90%;
         box-shadow: 10px 10px 5px #0f0f0f8f;
         border-radius: 10px;
         position: relative;
-        top: 5%;
+        right: 10vw;
       }
-    }
-    & .tagBar {
-      grid-area: tB;
-    }
-
-    & .colorBar {
-      grid-area: clrB;
-      height: 23vh;
     }
 }
 
 
-@media only screen and (max-width: 1325px) {
+@media only screen and (max-width: 800px) {
   .grid-container {
     display: grid;
     grid-template-columns: auto;

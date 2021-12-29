@@ -7,15 +7,14 @@ const TagsGrid = () => {
     const {tags} = useSelector(state => state.analysis);
     return (
         <div className="bar_container">
-            <div className="bar">
                 {
                     tags.map((tag, index) => {
-                        while(index<20){
-                        return <TagElement name={tag.name} key={tag.id}/>
+                        if(index > 20){
+                        return <div></div>
                         }
+                        return <TagElement name={tag.name} key={tag.id}/>
                     })
                 }
-            </div>
         </div>
     )
 }

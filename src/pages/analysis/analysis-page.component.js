@@ -15,12 +15,8 @@ const AnalysisPage = () => {
             <div className="img-container" style ={style}>
                 <img src={image}  alt="img" className="img" />
             </div>
-            <div className="tagBar">
                 <TagsGrid />
-            </div>
-            <div className="colorBar">
-                <ColorGrid/>
-            </div>      
+                <ColorGrid/>  
         </div>
     )
 }

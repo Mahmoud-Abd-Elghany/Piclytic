@@ -15,13 +15,15 @@ const FormLinkPage = (props) => {
         }
     }
     return (
-        <div className="form_container">
-                <p className="paragraph">Place your image to analyze the colors and the components of the image</p>
-                <div className="inputForm">
-                    <input className="input" type="text" placeholder="Copy your image address here.." value={image} onChange={e => dispatch(setImage(e.target.value))}/>
-                    <Link to='/Analyze' className="btn" onClick={onClickHandler}><div className='text'>AnalyZe</div></Link>
-                </div>
-            <img className="image" src={image} alt=""/>
+        <div className='page-container'>
+            <div className="form_container">
+                    <p className="paragraph">Place your image to analyze the colors and the components of the image</p>
+                    <div className="inputForm">
+                        <input className="input" type="text" placeholder="Copy your image address here.." value={image} onChange={e => dispatch(setImage(e.target.value))}/>
+                        <Link to='/Analyze' className="btn" onClick={onClickHandler}><div className='text'>AnalyZe</div></Link>
+                    </div>
+                <img className="image" src={image} alt=""/>
+            </div>
         </div>
     )
 };

@@ -1,12 +1,14 @@
 .bar-container{
     display: flex;
     flex-direction: row;
-    height: 95%;
+    align-items: center;
+    justify-content: center;
+    height: 30vh;
     width: 100%;
-    margin: 1vh 0px;
+    margin: 0;
 }
 
-@media only screen and (max-width:1325px){
+@media only screen and (max-width:800px){
     .bar-container{
         display: flex;
         flex-direction: row;

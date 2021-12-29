@@ -9,9 +9,10 @@ const ColorGrid = () => {
         <div className="bar-container">
         {
             colors.map((color) => {
-                if(color.value > 0.01){
+                if(color.value > 0.02){
                     return <ColorBar hex_value= {color.raw_hex} perc={(color.value)}/>
                 }
+                return <div></div>
             })
         }      
         </div>

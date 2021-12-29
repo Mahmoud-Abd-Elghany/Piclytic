@@ -4,8 +4,13 @@ body {
     font-family: 'Righteous', cursive;
     background: rgb(117,0,96);
 	background: linear-gradient(90deg, rgba(117,0,96,1) 0%, rgb(11, 58, 75) 90%);
+    margin: 0;
+    padding: 0;
 }
 
+*{
+    box-sizing: border-box;
+}
 button{
     cursor: pointer;
 }
