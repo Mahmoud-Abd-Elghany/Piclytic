@@ -1,51 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 $white : #ffffffab;
-@mixin flex{
-    display: flex;
-    justify-content: flex-start;
-    align-content: center;
-}
 
-@mixin reset {
-    margin: 0;
-    padding: 0;
-}
+
 .navbar {
-    @include reset;
-    height: 8vh;
+    font-family: 'Righteous', cursive;
+    position: sticky;
+    top: 5%;
+    height: 12vh;
     width: 100%;
     z-index: 100;
-
-    & .container{
-        max-width: 95%;
+ 
+    & .list{
+        list-style: none;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
         height: 100%;
-        @include reset;
-        margin: auto;
-        @include flex;
-        margin: 0 auto;
+        width: 100%;
+        padding-right: 1%;
+        
 
-        & .list{
-            list-style: none;
-            @include reset;
-            margin: auto 0;
-            font-family: 'Righteous', cursive;
-            display: flex;
-            flex-direction: row;
-
-            & .list_item{
-                font-size: 30px;
-                font-weight: 400;
-                text-decoration: none;
-                color: #cfcfcf;
-                padding: 3px 5px;
-                transition: 0.1s ease;
-                background-color: transparent;
-                &:hover{
-                    border-width: 2px;
-                    color: white;
-                }
+        & .list_item{
+            min-height: 40px;
+            min-width: 40px;
+            font-size: 34px;
+            font-weight: 400;
+            text-decoration: none;
+            color: #cfcfcf;
+            transition: 0.1s ease;
+            background-color: transparent;
+            border: 2px solid white;
+            border-radius: 3px;
+            padding: 0vh 0.5vw;
+            &:hover{
+                color: white;
+            }
         }
-    }
-
     }
 }

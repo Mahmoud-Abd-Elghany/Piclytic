@@ -3,7 +3,6 @@ import Navbar from "./components/navbar/navbar.component"
 import FormLinkPage from "./pages/form-link/formlink-page.component"
 import InvalidPage from "./pages/invalid/invalid-page.component"
 import AnalysisPageContainer from "./pages/analysis/analysis-page.container"
-import "./App.css"
 import {
   BrowserRouter as Router,
   Route,

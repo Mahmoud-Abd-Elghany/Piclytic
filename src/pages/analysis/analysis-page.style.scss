@@ -7,12 +7,13 @@
       background-color: #2222227e;
       height: 90vh;
       width: 100%;
-      background-size: cover;
+      background-size:cover;
+      background-repeat: no-repeat;
+      background-position: center;
       background-blend-mode: multiply;
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-top: 2vh;
 
       & .img {
         max-width: 90%;

@@ -16,7 +16,6 @@ const Navbar = () => {
     return (
         <div>
             <nav className="navbar">
-                <div className="container">
                     <ul className="list">
                         <li>
                             <Link onClick={clickHandler} className="list_item" to="/">
@@ -24,7 +23,6 @@ const Navbar = () => {
                             </Link>
                         </li>
                     </ul>
-                </div>
             </nav>
         </div>
     )

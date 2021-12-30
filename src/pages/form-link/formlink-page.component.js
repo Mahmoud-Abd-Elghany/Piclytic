@@ -6,7 +6,7 @@ import { setImage } from '../../redux/formlink/formlink.actions';
 import { fetchStartAsync } from '../../redux/analysis/analysis.actions';
 
 
-const FormLinkPage = (props) => {
+const FormLinkPage = () => {
     const image = useSelector(state => state.formlink.image);
     const dispatch = useDispatch();
     const onClickHandler = () => {

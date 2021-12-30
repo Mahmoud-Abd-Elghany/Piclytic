@@ -14,7 +14,7 @@
   transition: 0.1s ease-out;
   font-size: 1.4vw;
   padding: 0.4vh 1vw;
-  width: 65%;
+  width: fit-content;
 }
 
 .element:hover {
@@ -25,14 +25,5 @@
 }
 
 @media only screen and (max-width: 800px) {
-  .element {
-    border: 1px solid #eeeeee;
-    width: 110px;
-    padding: 3px;
-    border-radius: 20px;
-    text-align: center;
-    margin: 2px;
-    transition: 0.1s ease-out;
-    font-size: 15px;
-  }
+
 }

@@ -1,5 +1,6 @@
 .bar_container{
     width: 34%;
+    min-width: 300px;
     height: 90vh;
     box-sizing: border-box;
     display: flex;
@@ -15,14 +16,4 @@
 }
 
 @media only screen and (max-width: 800px) {
-    .bar{
-        display: grid;
-        grid-template-columns: auto auto auto;
-        justify-items: center;
-        grid-row-gap: 2%;
-        margin: auto;
-        padding: 5px 5px;
-        grid-column-gap: 1%;
-        width: 90%;
-    }
 }

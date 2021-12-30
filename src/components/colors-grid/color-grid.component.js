@@ -4,13 +4,14 @@ import "./color-grid.style.scss"
 import ColorBar from "../color-bar/color-bar.component"
 
 const ColorGrid = () => {
-    const {colors} = useSelector(state => state.analysis)
+    const {colors} = useSelector(state => state.analysis);
+    console.log(colors);
     return (
         <div className="bar-container">
         {
             colors.map((color) => {
                 if(color.value > 0.02){
-                    return <ColorBar hex_value= {color.raw_hex} perc={(color.value)}/>
+                    return <ColorBar key = {color.w3c.name} hex_value= {color.raw_hex} perc={(color.value)}/>
                 }
                 return <div></div>
             })
