@@ -1,9 +1,9 @@
 
 .element-container{
-  width: 50%;
+  width: 25%;
   display: flex;
   align-items: center;
-  justify-content: flex-end ;
+  justify-content: center;
   text-align: center;
 }
 .element {
@@ -24,6 +24,9 @@
   cursor: pointer;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
+  .element {
+    font-size: 0.75rem;
+  }
 
 }

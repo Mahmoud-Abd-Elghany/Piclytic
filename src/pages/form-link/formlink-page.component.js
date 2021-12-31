@@ -17,7 +17,10 @@ const FormLinkPage = () => {
     return (
         <div className='page-container'>
             <div className="form_container">
-                    <p className="paragraph">Place your image to analyze the colors and the components of the image</p>
+                    <p className="paragraph">
+                        Place your image to analyze the colors and the components of the image
+                        <div style= {{ fontSize: "1rem", opacity: '0.6'}}>ex. https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/beach-quotes-1559667853.jpg</div>
+                    </p>
                     <div className="inputForm">
                         <input className="input" type="text" placeholder="Copy your image address here.." value={image} onChange={e => dispatch(setImage(e.target.value))}/>
                         <Link to='/Analyze' className="btn" onClick={onClickHandler}><div className='text'>AnalyZe</div></Link>

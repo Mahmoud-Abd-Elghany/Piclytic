@@ -20,43 +20,15 @@
         max-height: 90%;
         box-shadow: 10px 10px 5px #0f0f0f8f;
         border-radius: 10px;
-        position: relative;
-        right: 10vw;
       }
     }
 }
 
 
-@media only screen and (max-width: 800px) {
-  .grid-container {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 64% 23% 26%;
-    grid-template-areas:
-      "img"
-      "clrB"
-      "tB";
-  }
-  
-  .grid-container .img-container {
-    grid-area: img;
-  }
-  
-  .grid-container .img-container .img {
-    margin: auto;
-    display: block;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    top: 20%;
-    max-width: 350px;
-    max-height: 400px;
-  }
-  
-  .grid-container .tagBar {
-    grid-area: tB;
-  }
-  .grid-container .colorBar {
-    grid-area: clrB;
+@media only screen and (max-width: 1000px) {
+  .grid-container{
+    & .img-container {
+      height: 40vh;
+    }
   }
 }
