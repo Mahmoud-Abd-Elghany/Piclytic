@@ -6,7 +6,8 @@ const InvalidPage = () => {
         <div>
             <p className="main-p">
             OOPS<br/>
-            An error has Occured
+            An error has Occured try again<br/>
+            If the error appeared again try another image.
             </p>
         </div>
     )
