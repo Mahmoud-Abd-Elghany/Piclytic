@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 88vh;
+  height: 80vh;
   width: 100vw;
 }
 
@@ -83,7 +83,7 @@
 
   & .image {
     max-width: 70vw;
-    max-height: 100%;
+    max-height: 40vh;
     box-sizing: border-box;
     box-shadow: 10px 10px 10px #00050467;
     border-radius: 3px;
