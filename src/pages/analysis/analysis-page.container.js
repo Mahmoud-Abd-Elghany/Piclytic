@@ -6,7 +6,6 @@ import { useSelector } from 'react-redux';
 const AnalyzedWithSpinner = WithSpinner(AnalysisPage);
 const AnalysisPageContainer = () => {
     const {isLoading, error} = useSelector(state => state.analysis)
-    console.log('AnalyzedWithSpinner component', isLoading);
     return( error? 
     <InvalidPage/> 
     :
